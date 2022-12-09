@@ -13,7 +13,10 @@
 
 <body>
     <!-- background image -->
-    <img class="image" scr = "IMG_2003.jpg" >
+    <!-- <img class="image" scr = "IMG_2003.jpg" > -->
+    
+    {% load static %}     
+    <img id="bg" src="{% static 'img/IMG_2003.jpg' %}" width="1920" height="720"/>
     
     
     <h1>EnlighTan</h1>

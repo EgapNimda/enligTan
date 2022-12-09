@@ -1,0 +1,244 @@
+/* * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+    background: #A5A58D;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Serif SC', serif;
+/* 
+    background: url(IMG_2003.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+
+}
+
+.imgage{
+    position: absolute;
+    width: 1253px;
+    max-width: 100%;
+    height: 455px;
+    left: calc(50% - 1253px/2);
+    top: calc(50% - 455px/2 - 125px);
+
+    background: url(IMG_2003.jpg);
+}
+
+h1{      
+    position: absolute;
+    left: 3.35%;
+    right: 75.1%;
+    top: 2.82%;
+    bottom: 86.1%;
+
+    font-family: 'Noto Serif SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+    letter-spacing: 0.125em;
+
+    color: #FFE454;
+    /* อยากให้กรอบมันเป็ฯ outter line อ่ะ ตอนนี้เหมือนเป้น inner line */
+    -webkit-text-stroke: 1px #C5BAA2;
+
+
+    /* text-shadow:
+    -1px 0px 0px #C5BAA2,
+    1px 0px 0px #C5BAA2,
+    0px -1px 0px #C5BAA2,
+    0px 1px 0px #C5BAA2;    */
+
+    text-shadow: 4px 5px 6px rgba(0, 0, 0, 0.38);
+
+}
+
+/*login button*/
+.loginbut{
+    font-family: 'Kanit','sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #504C45;
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 86%;
+    top: 57px;
+        
+    background: rgba(252, 244, 200, 0.26);
+    border-radius: 32px;
+
+    border-style: none;
+    
+}
+
+/* auto layout*/
+.flex-option-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 52px;
+
+    position: absolute;
+    width: 1253px;
+    height: 263px;
+    left: 0px;
+    top: 445px;
+
+}
+
+/*daily*/
+.flex-option-container .daily .icon{
+    position: absolute;
+    width: 75.45px;
+    height: 75.45px;
+    left: 457px;
+    top: 780px;
+
+}
+
+.flex-option-container .daily .topic{
+    position: absolute;
+    width: 220px;
+    height: 29px;
+    left: calc(50% - 201px/2 - 303.98px);
+    top: calc(50% - 29px/2 + 1.88px);
+
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #FFFFFF;
+
+}
+
+.flex-option-container .daily:hover {
+    color: #504C45;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.flex-option-container .daily .description{
+    position: absolute;
+    width: 249px;
+    height: 83px;
+    left: 200.02px;
+    top: 149.88px;
+
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+
+
+/*important date*/
+.flex-option-container .important .icon{
+    position: absolute;
+    width: 75.45px;
+    height: 75.45px;
+    left: 457px;
+    top: 780px;
+
+}
+
+.flex-option-container .important .topic{
+    position: absolute;
+    width: 220px;
+    height: 29px;
+    left: calc(50% - 201px/2 - 1.98px);
+    top: calc(50% - 29px/2 + 1.88px);
+
+    font-family: 'Kanit', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
+
+.flex-option-container .important .description{
+    position: absolute;
+    width: 249px;
+    height: 83px;
+    left: 503.02px;
+    top: 149.88px;
+
+    font-family: 'Kanit', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+
+/*others*/
+.flex-option-container .others .icon{
+    position: absolute;
+    width: 75.45px;
+    height: 75.45px;
+    left: 457px;
+    top: 780px;
+
+}
+
+.flex-option-container .others .topic{
+    position: absolute;
+    width: 184px;
+    height: 29px;
+    left: calc(50% - 164px/2 + 301.5px);
+    top: calc(50% - 29px/2 + 2px);
+
+    font-family: 'Kanit', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
+
+.flex-option-container .others .description{
+    position: absolute;
+    width: 249px;
+    height: 83px;
+    left: 806.01px;
+    top: 149.5px;
+
+    font-family: 'Kanit', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+

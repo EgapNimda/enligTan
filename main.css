@@ -1,0 +1,53 @@
+/* * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+    background: #A5A58D;
+    /* font-family: "inter", "open-sans", "serif", "consolas" */
+}
+
+h1{
+    position: absolute;
+    width: 267px;
+    height: 40px;
+    left: 38px;
+    top: 37px;
+
+    font-family: "inter", "open-sans", "serif";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.125em;
+
+    color: #504C45;
+
+    text-shadow: 4px 5px 4px rgba(97, 94, 92, 0.45);
+}
+
+
+.loginbut{
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 1070px;
+    top: 70px;  
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    
+
+    color: #504C45;
+
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 32px;
+
+    border-style: none;
+}
+

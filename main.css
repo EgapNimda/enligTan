@@ -91,7 +91,7 @@ h1{
     gap: 52px;
 
     position: absolute;
-    width: 1253px;
+    width: 1920px;
     height: 263px;
     left: 0px;
     top: 445px;
@@ -99,146 +99,7 @@ h1{
 }
 
 /*daily*/
-.flex-option-container .daily .icon{
-    position: absolute;
-    width: 75.45px;
-    height: 75.45px;
-    left: 457px;
-    top: 780px;
-
-}
-
-.flex-option-container .daily .topic{
-    position: absolute;
-    width: 220px;
-    height: 29px;
-    left: calc(50% - 201px/2 - 303.98px);
-    top: calc(50% - 29px/2 + 1.88px);
-
-    font-family: 'Kanit', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+.flex-option-container .daily{
     
-    color: #FFFFFF;
-
-}
-
-.flex-option-container .daily:hover {
-    color: #504C45;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.flex-option-container .daily .description{
-    position: absolute;
-    width: 249px;
-    height: 83px;
-    left: 200.02px;
-    top: 149.88px;
-
-    font-family: 'Kanit', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: center;
-
-    color: #FFFFFF;
-
-    opacity: 0.8;
-}
-
-
-/*important date*/
-.flex-option-container .important .icon{
-    position: absolute;
-    width: 75.45px;
-    height: 75.45px;
-    left: 457px;
-    top: 780px;
-
-}
-
-.flex-option-container .important .topic{
-    position: absolute;
-    width: 220px;
-    height: 29px;
-    left: calc(50% - 201px/2 - 1.98px);
-    top: calc(50% - 29px/2 + 1.88px);
-
-    font-family: 'Kanit', 'sans-serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #FFFFFF;
-
-}
-
-.flex-option-container .important .description{
-    position: absolute;
-    width: 249px;
-    height: 83px;
-    left: 503.02px;
-    top: 149.88px;
-
-    font-family: 'Kanit', 'sans-serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: center;
-
-    color: #FFFFFF;
-
-    opacity: 0.8;
-}
-
-/*others*/
-.flex-option-container .others .icon{
-    position: absolute;
-    width: 75.45px;
-    height: 75.45px;
-    left: 457px;
-    top: 780px;
-
-}
-
-.flex-option-container .others .topic{
-    position: absolute;
-    width: 184px;
-    height: 29px;
-    left: calc(50% - 164px/2 + 301.5px);
-    top: calc(50% - 29px/2 + 2px);
-
-    font-family: 'Kanit', 'sans-serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #FFFFFF;
-
-}
-
-.flex-option-container .others .description{
-    position: absolute;
-    width: 249px;
-    height: 83px;
-    left: 806.01px;
-    top: 149.5px;
-
-    font-family: 'Kanit', 'sans-serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-
-    color: #FFFFFF;
-
-    opacity: 0.8;
 }
 

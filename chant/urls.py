@@ -20,5 +20,6 @@ from chanting import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("hi/",views.main)
+    path("hi/",views.home),
+    path("others/",views.others)
 ]

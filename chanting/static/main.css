@@ -156,6 +156,7 @@ h1{
 }
 
 
+
 /*important date*/
 .flex-option-container .important .icon{
     position: absolute;
@@ -166,7 +167,7 @@ h1{
 
 }
 
-.flex-option-container .important .topic{
+.flex-option-container .important #topic{
     position: absolute;
     width: 220px;
     height: 29px;
@@ -183,7 +184,7 @@ h1{
 
 }
 
-.flex-option-container .important .description{
+.flex-option-container .important #description{
     position: absolute;
     width: 249px;
     height: 83px;
@@ -201,6 +202,16 @@ h1{
 
     opacity: 0.8;
 }
+.flex-option-container .important:hover #topic {
+    color: #504C45;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.flex-option-container .important:hover #description {
+    color: #504C45;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
 
 /*others*/
 .flex-option-container .others .icon{
@@ -212,7 +223,7 @@ h1{
 
 }
 
-.flex-option-container .others .topic{
+.flex-option-container .others #topic{
     position: absolute;
     width: 184px;
     height: 29px;
@@ -229,7 +240,7 @@ h1{
 
 }
 
-.flex-option-container .others .description{
+.flex-option-container .others #description{
     position: absolute;
     width: 249px;
     height: 83px;
@@ -246,4 +257,12 @@ h1{
     color: #FFFFFF;
 
     opacity: 0.8;
+}
+.flex-option-container .others:hover #topic {
+    color: #504C45;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.flex-option-container .others:hover #description {
+    color: #504C45;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

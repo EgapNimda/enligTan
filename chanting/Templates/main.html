@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +18,7 @@
     <!-- background image -->
     {% load static %}
     <img id="bg" src="{% static 'IMG_2003.jpg' %}" width="1920" height="720"/>
-
-
-    
-    
+    <h1>{{monk}}</h1>
     <h1>EnlighTan</h1>
 
     <!-- <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
@@ -32,9 +30,10 @@
 
     <div>
         <!-- <div class="login">เข้าสู่ระบบ</div> -->
-        <a href="signIn.html"><button class="loginbut">เข้าสู่ระบบ</button></a>
+        <a href="signin.html"><button class="loginbut">เข้าสู่ระบบ</button></a>
             
     </div>    
+    
 
     <div class="flex-option-container">
 
@@ -42,8 +41,8 @@
 
             <div class="icon"></div>
             
-                <div class="topic">บทสวดมนต์วันสำคัญ</div>
-                <div class="description">บทสวดมนต์ในวันสำคัญทางศาสนา</div>   
+                <div id="topic">บทสวดมนต์วันสำคัญ</div>
+                <div id="description">บทสวดมนต์ในวันสำคัญทางศาสนา</div>   
             
         </div>
 
@@ -60,8 +59,8 @@
         <div class="others">
 
             <div class="icon"></div>
-            <div class="topic">บทสวดมนต์อื่น ๆ</div>
-            <div class="description">บทสวดมนต์ทั้งหมด</div> 
+            <div id="topic">บทสวดมนต์อื่น ๆ</div>
+            <div id="description">บทสวดมนต์ทั้งหมด</div> 
             
         </div>
 

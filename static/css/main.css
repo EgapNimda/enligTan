@@ -176,10 +176,10 @@ h1{
     position: absolute;
     width: 210px;
     height: 83px;
-    left: calc(50% - 201px/2 - 303.98px);
+    left: calc(50% - 201px/2 - 308.5px);
     top: 150.88px;
 
-    font-family: 'Kanit', 'sans-serif';
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -223,7 +223,7 @@ h1{
     left: calc(50% - 201px/2 - 1.98px);
     top: calc(50% - 29px/2 + 1.88px);
 
-    font-family: 'Kanit', 'sans-serif';
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -240,7 +240,7 @@ h1{
     left: calc(50% - 201px/2 - 1.98px);
     top: 150.88px;
 
-    font-family: 'Kanit', 'sans-serif';
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -283,7 +283,7 @@ h1{
     left: calc(50% - 164px/2 + 301.5px);
     top: calc(50% - 29px/2 + 2px);
 
-    font-family: 'Kanit', 'sans-serif';
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -299,7 +299,7 @@ h1{
     left: calc(50% - 164px/2 + 293.5px);
     top: 150.88px;
 
-    font-family: 'Kanit', 'sans-serif';
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;

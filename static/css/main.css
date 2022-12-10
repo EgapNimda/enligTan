@@ -142,7 +142,7 @@ h1{
 .flex-option-container .important .icon{
     position: absolute;
     width: 200px;
-    left: calc(50% - 201px/2 - 243.98px );
+    left: calc(50% - 201px/2 - 251.98px);
     right: 71.99%;
     top: 3.9%;
     bottom: 63.46%;
@@ -202,7 +202,8 @@ h1{
 }
 
 .flex-option-container .important:hover .icon{
-    -webkit-filter:invert();
+    -webkit-filter:invert(0.8);
+   
 }
 
 /*daily*/
@@ -264,7 +265,7 @@ h1{
 }
 
 .flex-option-container .daily:hover .icon{
-    -webkit-filter:invert();
+    -webkit-filter:invert(0.8);
 }
 
 /*others*/
@@ -272,7 +273,7 @@ h1{
     position: absolute;
     width: 71.98px;
     height: 73px;
-    left: calc(50% - 201px/2 - 251.98px);
+    left: calc(50% - 164px/2 + 351.5px);
     top: calc(50% - 29px/2 - 50px);
 }
 
@@ -322,5 +323,5 @@ h1{
 }
 
 .flex-option-container .others:hover .icon{
-    -webkit-filter:invert();
+    -webkit-filter:invert(0.8);
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
-    <link rel="stylesheet" href ="signIn.css">
+    <link rel="stylesheet" href ="{% static 'css/signIn.css' %}">
     <!-- add font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Noto+Serif+SC&display=swap" rel="stylesheet">
 
@@ -14,7 +16,7 @@
     <h1 id="title">EnlighTan</h1>
     <h1 id="signin"><b>Sign in to your Account</b></h1>
     <h4>Do not have an account?</h4>
-    <a href="signUp.html">Sign up now</a>
+    <a href="/account/signup">Sign up now</a>
 
     <div class="fillin-container">
         <form>

@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnlighTan</title>
-    <link rel="stylesheet" href ="main.css">
+    <link rel="stylesheet" href ="D:\Year2 S1\Info System\Enlightannnnn\static\css\main.css">
     <!-- add font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Noto+Serif+SC&display=swap" rel="stylesheet">
     
 </head>
 
 <body>
+
     <!-- background image -->
-    <!-- <img class="image" scr = "IMG_2003.jpg" > -->
-    
-    {% load static %}     
-    <img id="bg" src="{% static 'img/IMG_2003.jpg' %}" width="1920" height="720"/>
-    
-    
+    <img class="bg" src="D:\Year2 S1\Info System\Enlightannnnn\static\img\IMG_2003.jpg" width="1253">
+
+    <div class="toprectangle"></div>
+
     <h1>EnlighTan</h1>
 
     <!-- <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
@@ -34,28 +33,38 @@
             
     </div>    
 
+    <div class="say">พรุ่งนี้วันพระ</div>
+
+    <div class="midrectangle"></div>
+
+
     <div class="flex-option-container">
 
         <div class="important">
 
-            <div class="icon"></div>
+            <div class="icon">
+                <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\calendar.png" >
+            </div>
             <div class="topic">บทสวดมนต์วันสำคัญ</div>
-            <label>บทสวดมนต์ในวันสำคัญทางศาสนา</label>label>   
+            <div class="description">บทสวดมนต์ในวันสำคัญทางศาสนา</div>  
 
         </div>
 
         <div class="daily">
 
-            <div class="icon"></div>
+            <div class="icon">
+                <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\book.png" width="90">
+            </div>
             <div class="topic">บทสวดมนต์ประจำวัน</div>
             <div class="description">บทสวดมนต์ประจำวันในสัปดาห์</div>   
-                
 
         </div>
 
         <div class="others">
 
-            <div class="icon"></div>
+            <div class="icon">
+                <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\dots.png" width="60">
+            </div>
             <div class="topic">บทสวดมนต์อื่น ๆ</div>
             <div class="description">บทสวดมนต์ทั้งหมด</div> 
             

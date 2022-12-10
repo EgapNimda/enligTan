@@ -56,7 +56,7 @@ h1{
 
 /*login button*/
 .loginbut{
-    font-family: 'Kanit','sans-serif';
+    font-family: 'Noto Sans Thai','Kanit','sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -92,21 +92,21 @@ h1{
 
 .say{
     position: absolute;
-    width: 1253px;
+    width: 754px;
     height: 125px;
     left: 37%;
-    top: 210px;
-    
-    font-family: 'Kanit', 'sans-serif';
+    top: 213px;
+
+    font-family: 'Noto Sans Thai', 'sans-serif';
     font-style: normal;
-    font-weight: 20;
-    font-size: 72px;
-    line-height: 92px;
+    font-size: 80px;
+    line-height: 97px;
     display: flex;
     align-items: center;
     text-align: center;
-    
-    color: #f3e7b2;
+
+    color: #FFFFFF;
+
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.54);
 }
 
@@ -162,7 +162,7 @@ h1{
     left: calc(50% - 201px/2 - 303.98px);
     top: calc(50% - 29px/2 + 1.88px);
 
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -208,7 +208,7 @@ h1{
 /*daily*/
 .flex-option-container .daily .icon{
     position: absolute;
-    left: calc(50% - 201px/2 + 48px);
+    left: calc(50% - 201px/2 + 50px);
     right: 47.09%;
     top: 3.9%;
     bottom: 61.18%;

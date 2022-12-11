@@ -20,7 +20,10 @@ import authen
 
 
 urlpatterns = [
-    path("admin", admin.site.urls),
-    path("main",views.main),
+    path("admin/", admin.site.urls),
+    path("main/",views.main, name="main"),
     path("",include('authen.urls')),
+    path("", views.main),
+    path("viewProfile/", views.viewProfile),
+    path("suadPrajum/",views.suadPrajum)
 ]

@@ -19,27 +19,25 @@
     <!-- background image -->
     <img class="bg" src="{%static 'img/IMG_2003.jpg' %}" width="100%">
 
-    <div class="toprectangle"></div>
+    <div class="toprectangle" width="100%"></div>
 
     <h1>EnlighTan</h1>
 
     <div>
+        {% if user.is_authenticated %}
+
+        <!-- ปุ่มดูหน้าโปรไฟล์ -->
+        <a href="/viewProfile"><button class="viewprofile">ดูโปรไฟล์</button></a>
+        {% else %}
         <!-- ปุ่มเข้าสู่ระบบ -->
         <a href="/signIn"><button class="loginbut">เข้าสู่ระบบ</button></a>
-        <!-- ปุ่มดูหน้าโปรไฟล์ -->
-        <!-- <a href="/viewProfile"><button class="viewprofile">ดูโปรไฟล์</button></a> -->
+        {% endif %}
     </div>   
 
    
     <div class="say">{{monk}}</div>
 
-    <div class="midrectangle"></div>
-    
-    <div>
-        <!-- <div class="login">เข้าสู่ระบบ</div> -->
-        <a href="/signIn"><button class="loginbut">เข้าสู่ระบบ</button></a>
-            
-    </div>    
+    <div class="midrectangle"></div>  
 
     <div class="midrectangle"></div>
 
@@ -56,7 +54,7 @@
 
         </div>
 
-        <div class="daily">
+        <div class="daily" onclick="location.href='/suadPrajum'">
 
             <div class="icon">
                 <img src="{%static 'img/book.png' %}" width="90">

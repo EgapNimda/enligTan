@@ -33,7 +33,7 @@
     <a class="signin" href="/signIn">Sign in now</a>
 
     <div class="flex-container">
-        <form action="/signUp", method = 'POST'>
+        <form action="/signUp/", method = 'POST'>
             {% csrf_token %}
             <div>
                 <label class="user" for="username">Username</label>
@@ -52,7 +52,7 @@
 
             <div>
                 <label class="conpass" for="conpassword">Confirmed Password</label>
-                <input type = "password" id = "conpassword" name = "password" placeholder = "Enter your password again" required minlength="8" maxlength="12">
+                <input type = "password" id = "conpassword" name = "conpassword" placeholder = "Enter your password again" required minlength="8" maxlength="12">
             </div>
 
             <div>

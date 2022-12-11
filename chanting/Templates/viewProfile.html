@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="D:\Year2 S1\Info System\Enlightannnnn\static\css\viewProfile.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile</title>
+   <link rel="stylesheet" href ="{% static 'css/viewProfile.css' %}">
+   <!-- add font -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Noto+Serif+SC&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400&display=swap" rel="stylesheet">
+
+   <meta http-equiv="refresh" content="10000">
+
+</head>
+<body>
+    <!-- ดาว -->
+    <!-- <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/mdgrhyca.json"
+        trigger="morph"
+        style="width:25px;height:25px">
+    </lord-icon> -->
+
+    <!-- background image-->
+    <!-- <img class="bg" src="/enlighTan-kaidip/static/img/Rectangle 65.png" width="1500" height="10">
+    <img class="upr" rc="/enlighTan-kaidip/static/img/Rectangle 65.png" > -->
+    <!-- <img class="pra" src="/enlighTan-kaidip/static/img/พระองค์ส้ม.png" width="517"height="519"top="188px"> -->
+    <lord-icon src="https://cdn.lordicon.com/mdgrhyca.json" trigger="morph" style="width:25px;height:25px"></lord-icon>
+                
+    
+    <a  href="/main"><h1 class="title">EnlighTan</h1></a>
+    
+    <div class="profileFrame"></div>
+    
+    <div class="propic"></div>
+
+    <div class="chantFrame"></div>
+
+    <div>
+        <div class="username">{{request.user.username}</div>
+        <div class="mail">{{request.user.email}}</div>
+        <button class="signOut" onclick="location.href='/signOut'"">ออกจากระบบ</button>
+        <button class="editProfile">แก้ไขข้อมูลส่วนตัว</button>
+    </div>
+
+    <div class="head">บทสวดมนต์ที่ชื่นชอบ</div>
+    
+    <div class="containAllButton">
+        <div class="column1">
+            <input type="button" value="ชื่อบทสวด" id="fav1">
+            <input type="button" value="ชื่อบทสวด" id="fav3">
+            <input type="button" value="ชื่อบทสวด" id="fav5">
+            <input type="button" value="ชื่อบทสวด" id="fav7">
+        </div>
+        <div class="column2">
+            <input type="button" value="ชื่อบทสวด" id="fav2">
+            <input type="button" value="ชื่อบทสวด" id="fav4">
+            <input type="button" value="ชื่อบทสวด" id="fav6">
+            <input type="button" value="ชื่อบทสวด" id="fav8">
+        </div>
+    </div>
+
+    <!-- <button class="star1" onclick="change()" id="star1"><img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.png"> </div> -->
+<!--     
+    <button type="submit">
+        <img src="https://i.ibb.co/CW5Wvry/buttonpng.png" alt="buttonpng">
+    </button> -->
+
+    <!-- <script>
+        function change(){
+            var img = document.getElementById('star1');
+            img.src = "filled_star.png";
+        }
+    </script> -->
+
+    
+
+  
+</body>

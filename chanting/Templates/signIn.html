@@ -38,7 +38,9 @@
     <a class="signin" href="/signUp">Sign up now</a>
 
     <div class="fillin-container">
-        <form>
+        <form action="/signIn/" method="POST">
+            {% csrf_token %}
+        
             <div>
                 <label class="name" for="username">Username</label><br>
                 <input type = "text" id = "username" name = "username" placeholder = "Enter your name here" required maxlength="30">
@@ -50,7 +52,7 @@
             </div>
 
             <div>
-                <button class="sub" type="submit" href="main_loggedIn.html">Sign In</button>
+                <button class="sub" type="submit">Sign In</button>
             </div>
         </form>
     </div>

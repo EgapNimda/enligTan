@@ -3,13 +3,16 @@ from django.http import HttpResponse
 from .models import myuser
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 
 def signUp(request):
     if request.method == 'POST':
         username = request.POST['username']
-        email = request.POST['email']
+        email = request.POST['mail']
         password = request.POST['password']
         conpassword = request.POST['conpassword']
         if User.objects.filter(username=username):
@@ -30,6 +33,7 @@ def signUp(request):
         myuser=User.objects.create_user(username,email,password)
         myuser.first_name=username
         myuser.save()
+        return render(request,"main.html")
 
     return render(request,"signUp.html")
 
@@ -37,23 +41,30 @@ def signIn(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-        try:
-            user = User.objects.get(username)
+        if(User.objects.filter(username=username)):
+            user = User.objects.get(username=username)
             password_valid = user.check_password(password)
-            if password_valid:
-                pass
-            else:
-                messages.error(request,"Bad Credentials")
-                return redirect('home')
 
-            if user is not None:
-                user = authenticate(username=user.username, password=password)
-                login(request,user)
-                return render(request,"main.html")
+            if password_valid :
+                if user is not None:
+                    user = authenticate(username=user.username, password=password)
+                    login(request,user)
+                    return render(request,"main.html")
+                else:
+                    return redirect('signIn')
             else:
-                return redirect('singIn')
-
-        except:
+                messages.error(request, "Bad")
+                return redirect('signIn')
+                
+        
+        else:
             messages.error(request, "Bad")
             return redirect('signIn')
-    return render(request, 'main.html')
+
+    return render(request, 'signIn.html')
+
+
+def signOut(request):
+    logout(request)
+    messages.success(request,"Logged Out Successfully")
+    return render(request,"main.html")

@@ -80,6 +80,32 @@ h1{
     background:rgba(245, 245, 220, 0.625);
 }
 
+/* view profile button */
+.viewprofile{
+    font-family: 'Noto Sans Thai','Kanit','sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #504C45;
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 86%;
+    top: 64px;
+        
+    background: rgba(252, 244, 200, 0.26);
+    border-radius: 32px;
+
+    border-style: none;
+    
+}
+
+.viewprofile:hover{
+    background:rgba(245, 245, 220, 0.625);
+}
+
 .toprectangle{
     position: absolute;
     width: 1253px;

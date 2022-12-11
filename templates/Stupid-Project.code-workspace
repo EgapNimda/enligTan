@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../html test/Stupid-Project"
+		},
+		{
+			"path": "../../../enlighTan-kaidip"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "newET"
+	}
+}

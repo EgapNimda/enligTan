@@ -18,8 +18,7 @@ input:focus, textarea{
     outline: none;
 }
 
-
-l > div{
+/* l > div{
     position: absolute;
     width: 345px;
     height: 60px;
@@ -27,7 +26,7 @@ l > div{
     top: 95px;
     background-color:#000000;
     color:#FFF6C4;
-}
+} */
 
 .title {
     position: absolute;

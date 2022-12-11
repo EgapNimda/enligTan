@@ -25,7 +25,9 @@ body{
 
 bg{
     width: 100%;
-    max-width:1920px;
+    /* height: auto; */
+    max-width:3000px;
+    max-height: 1080px;
     object-fit: cover;
 }
 
@@ -108,7 +110,7 @@ h1{
 
 .toprectangle{
     position: absolute;
-    width: 1253px;
+    width: 100%;
     height: 106px;
     left: 0px;
     top: 0px;
@@ -121,11 +123,11 @@ h1{
     width: 754px;
     height: 125px;
     left: 37%;
-    top: 213px;
+    top: 37%;
 
     font-family: 'Noto Sans Thai', 'sans-serif';
     font-style: normal;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 97px;
     display: flex;
     align-items: center;
@@ -138,13 +140,18 @@ h1{
 
 .midrectangle{
     border: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     position: absolute;
-    width: 1253px;
+    width: 100%;
     height: 72px;
     left: 0px;
-    top: 61%;
+    top: 63%;
 
     background: linear-gradient(180deg, rgba(165, 165, 141, 0) 4.86%, #A5A58D 196.53%);
+    /* background: blanchedalmond;
+    opacity: 50%; */
 }
 
 /* auto layout*/
@@ -154,13 +161,26 @@ h1{
     justify-content: center;
     align-items: center;
     padding: 0%;
-    gap: 52px;
+    gap: 0px;
+    
+    position: absolute;
+    width: 100%;
+    height: 263px;
+    left: 0px;
+    top: 83.17%;
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    gap: 100px;
 
     position: absolute;
     width: 100%;
     height: 263px;
     left: 0px;
-    top: 445px;
+    top: 83.17%; */
 
 }
 
@@ -200,15 +220,15 @@ h1{
 
 .flex-option-container .important .description{
     position: absolute;
-    width: 210px;
+    width: 230px;
     height: 83px;
-    left: calc(50% - 201px/2 - 308.5px);
-    top: 150.88px;
+    left: calc(50% - 201px/2 - 314.5px);
+    top: 155.88px;
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
     text-align: center;
 
@@ -228,7 +248,7 @@ h1{
 }
 
 .flex-option-container .important:hover .icon{
-    -webkit-filter:invert(0.8);
+    -webkit-filter:invert(0.8) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
    
 }
 
@@ -241,7 +261,6 @@ h1{
     bottom: 61.18%;
 
 }
-
 
 .flex-option-container .daily .topic{
     position: absolute;
@@ -262,15 +281,15 @@ h1{
 
 .flex-option-container .daily .description{
     position: absolute;
-    width: 199px;
+    width: 250px;
     height: 83px;
-    left: calc(50% - 201px/2 - 1.98px);
-    top: 150.88px;
+    left: calc(50% - 201px/2 - 30.98px);
+    top: 155.88px;
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
     text-align: center;
 
@@ -291,7 +310,7 @@ h1{
 }
 
 .flex-option-container .daily:hover .icon{
-    -webkit-filter:invert(0.8);
+    -webkit-filter:invert(0.8) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /*others*/
@@ -305,9 +324,9 @@ h1{
 
 .flex-option-container .others .topic{
     position: absolute;
-    width: 184px;
+    width: 200px;
     height: 29px;
-    left: calc(50% - 164px/2 + 301.5px);
+    left: calc(50% - 164px/2 + 290.5px);
     top: calc(50% - 29px/2 + 2px);
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
@@ -321,15 +340,15 @@ h1{
 
 .flex-option-container .others .description{
     position: absolute;
-    width: 180px;
+    width: 250px;
     height: 83px;
-    left: calc(50% - 164px/2 + 293.5px);
-    top: 150.88px;
+    left: calc(50% - 164px/2 + 257.5px);
+    top: 155.88px;
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
     text-align: center;
 
@@ -349,5 +368,5 @@ h1{
 }
 
 .flex-option-container .others:hover .icon{
-    -webkit-filter:invert(0.8);
+    -webkit-filter:invert(0.8) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

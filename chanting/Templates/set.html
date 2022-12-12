@@ -36,7 +36,7 @@
     {% if p5 %}
     <a href="{% url 'chanting' title=p5 %}"><button id = "p5">{{p5}}</button></a>
     {% endif %}
-
+    
     {% if p6 %}
     <a href="{% url 'chanting' title=p6 %}"><button id = "p6">{{p6}}</button></a>
     {% endif %}
@@ -52,7 +52,8 @@
     {% if p9 %}
     <a href="{% url 'chanting' title=p9 %}"><button id = "p9">{{p9}}</button></a>
     {% endif %}
-    <h1 id="mon">บทสวดประจำวันออกพรรษา</h1>
+
+    <h1 id="mon">{{ptitle}}</h1>
     <img src="/static/img/star.svg" name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src='/static/img/Star 3.png';getElementById('dowB1').name='2'}else{ getElementById('dowB1').src='/static/img/star.svg';getElementById('dowB1').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB2" onclick="if(getElementById('dowB2').name=='1'){getElementById('dowB2').src='/static/img/Star 3.png';getElementById('dowB2').name='2'}else{ getElementById('dowB2').src='/static/img/star.svg';getElementById('dowB2').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB3" onclick="if(getElementById('dowB3').name=='1'){getElementById('dowB3').src='/static/img/Star 3.png';getElementById('dowB3').name='2'}else{ getElementById('dowB3').src='/static/img/star.svg';getElementById('dowB3').name='1'};">
@@ -63,5 +64,6 @@
     <img src="/static/img/star.svg" name="1" id ="dowB8" onclick="if(getElementById('dowB8').name=='1'){getElementById('dowB8').src='/static/img/Star 3.png';getElementById('dowB8').name='2'}else{ getElementById('dowB8').src='/static/img/star.svg';getElementById('dowB8').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB9" onclick="if(getElementById('dowB9').name=='1'){getElementById('dowB9').src='/static/img/Star 3.png';getElementById('dowB9').name='2'}else{ getElementById('dowB9').src='/static/img/star.svg';getElementById('dowB9').name='1'};">
     <img src="/static/img/🦆 icon _search_.png" class="seaBar">
+    <a href="ลิ้งไปสักหน้า"><button class="nextpage">หน้าถัดไป</button></a>
 </body>
 </html>

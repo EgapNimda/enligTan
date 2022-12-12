@@ -55,15 +55,19 @@ def chanting(request,title):
         }
     return render(request,"chanting.html",context)
 
-def set(request,title):
+def set(request,title,n):
     context = {}
     if(prayingset.objects.filter(title = title)):
+        context = {'ptitle' : title}
         ps = prayingset.objects.get(title = title)
         prlist = ps.set.all()
-        for i in range (0,len(prlist)):
-            key = "p" + str(i+1)
+        n = int(n)
+        n = n-1
+        for i in range (n*9,len(prlist)):
+            key = "p" + str( (i % 9) + 1)
             context.update( {key : prlist[i].title})
-            print(context)
+    else:
+        context = {'ptitle' : "ไม่พบข้อมูลในคลังบทสวด555"}
     return render(request,"set.html",context)
         
 

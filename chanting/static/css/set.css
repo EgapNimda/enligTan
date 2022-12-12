@@ -7,7 +7,16 @@ html,body{
     height: 100%;
     overflow: auto;
 }
+.nextpage{
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 1070px;
+    top: 695px;
 
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 32px;
+}
 .upr{
     width: 1253px;
     height: 208px;

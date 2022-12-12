@@ -11,25 +11,18 @@ html,body{
 .upr{
     position: absolute;
     width: 1253px;
-    height: 203px;
+    height: 208px;
     left: 0px;
     top: 0px;
+}
 
-}
-.downr{
-    width: 874px;
-    height: 497px;
-    left: 379px;
-    top: 208px;
-}
 
 .pra{
     position: absolute;
     width: 1253px;
-    height: 502px;
+    height: 507px;
     left: 0px;
-    top: 203px;
-    
+    top: 198px;
 
 
 }
@@ -49,14 +42,101 @@ html,body{
 #log:hover{
     color: var(--accentHover);
 }
-#p1{
+#dok1{
     position: absolute;
-    left:370px;
-    top: 380px;
+    width: 154px;
+    height: 274px;
+    left: 1032px;
+    top: 143px;
+}
+#dok2{
+        
+    position: absolute;
+    width: 154px;
+    height: 274px;
+    left: 72px;
+    top: 143px;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 38px;
+    
+    position: absolute;
+    width: 1124px;
+    height: 170px;
+    left: 84px;
+    top: 432px;
+    
+}
+
+.cl1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 52px;
+    
+    width: 830px;
+    height: 66px;
+    top:0px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 52px;
+
+    width: 830px;
+    height: 66px; */
+}
+
+.cl2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+    gap: 52px;
+
+    top:104px;
+    width: 1124px;
+    height: 66px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+#p1{
     position: absolute;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    left: 200px;
+    top: 400px;
+
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    position: absolute;
+    width: 242px;
+    height: 66px;
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family:'Noto Sans Thai';
@@ -68,19 +148,26 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    
+
 }
 #p1:hover{
-    background-color: #FFE8D6;
+    background: rgba(230, 201, 158, 0.94);
 }
 #p2{
-    position: absolute;
-    left:370px;
-    top: 500px;
+
     position: absolute;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    left: 494px;
+    top: 400px;
+
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+     position: absolute;
+    width: 242px;
+    height: 66px;
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family: 'Noto Sans Thai';
@@ -91,19 +178,25 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
+    display: flex; 
 }
-#p2:hover{
-    background-color: #FFE8D6;
+#p2:hover{background: rgba(230, 201, 158, 0.94);
 }
 #p3{
-    position: absolute;
-    left:370px;
-    top: 620px;
+
     position: absolute;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    left: 788px;
+    top: 400px;
+
+    background: rgba(255, 232, 214, 0.97);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+
+     width: 242px;
+    height: 66px;
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family: 'Noto Sans Thai';
@@ -115,87 +208,27 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
+    display: flex; 
 }
-#p3:hover{
-    background-color: #FFE8D6;
+#p3:hover{background: rgba(230, 201, 158, 0.94);
 }
 #p4{
-    position: absolute;
-    left:370px;
-    top: 20px;
-    position: absolute;
-    width: 242px;
-    height: 66px;
-    background: rgba(201, 151, 93, 0.79);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 24px;
-    font-family: 'Noto Sans Thai';
-    font-style: normal;
-    justify-content: center;
 
-    align-items: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    display: flex;
-}
-#p4:hover{
-    background-color: #FFE8D6;
-}
-#p5{
     position: absolute;
-    left:660px;
-    top: 500px;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    left: 0px;
+    top: 550px;
+    
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 24px;
-    font-family: 'Noto Sans Thai';
-    font-style: normal;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    display: flex;
-}
-#p5:hover{
-    background-color: #FFE8D6;
-}
-#p6{
-    position: absolute;
-    left:660px;
-    top: 620px;
-    width: 242px;
-    height: 66px;
-    background: rgba(201, 151, 93, 0.79);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 24px;
-    font-family: 'Noto Sans Thai';
-    font-style: normal;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    display: flex;
-}
-
-#p6:hover{
-    background-color: #FFE8D6;
-}
-#p7{
-    position: absolute;
-    left:960px;
+    border-radius: 24px; 
+    /* position: absolute;
+    left:650px;
     top: 380px;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family: 'Noto Sans Thai';
@@ -206,19 +239,26 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
+    display: flex; */
 }
-
-#p7:hover{
-    background-color: #FFE8D6;
+#p4:hover{background: rgba(230, 201, 158, 0.94);
 }
-#p8{
+#p5{
     position: absolute;
-    left:960px;
+    width: 242px;
+    height: 66px;
+    left: 294px;
+    top: 0px;
+
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    /* position: absolute;
+    left:650px;
     top: 500px;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family: 'Noto Sans Thai';
@@ -229,18 +269,27 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
+    display: flex; */
 }
+#p5:hover{background: rgba(230, 201, 158, 0.94);
+}
+#p6{
 
-#p8:hover{
-    background-color: #FFE8D6;
-}#p9{
     position: absolute;
-    left:960px;
+    width: 242px;
+    height: 66px;
+    left: 588px;
+    top: 0px;
+    
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    /* position: absolute;
+    left:650px;
     top: 620px;
     width: 242px;
     height: 66px;
-    background: rgba(201, 151, 93, 0.79);
+    background: rgba(255, 232, 214, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     font-family: 'Noto Sans Thai';
@@ -251,12 +300,48 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
+    display: flex; */
 }
 
-#p9:hover{
-    background-color: #FFE8D6;
+#p6:hover{background: rgba(230, 201, 158, 0.94);
 }
+#p7{
+    position: absolute;
+    width: 242px;
+    height: 66px;
+    left: 882px;
+    top: 0px;
+    
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+
+    /* position: absolute;
+    left:950px;
+    top: 380px;
+    width: 242px;
+    height: 66px;
+    background: rgba(255, 232, 214, 0.94);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    font-family: 'Noto Sans Thai';
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex; */
+}
+
+#p7:hover{background: rgba(230, 201, 158, 0.94);
+}
+
+
+
+
+
 #etan{      
     position: absolute;
     left: 3.35%;
@@ -298,76 +383,14 @@ html,body{
     left:890px;
     top: 260px;
 }
-#dowB1{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 560px;
-    top: 385px;
-}
-#dowB2{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 860px;
-    top: 385px;
-}
-#dowB3{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 1160px;
-    top: 385px;
-}
-#dowB4{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 560px;
-    top: 505px;
-}
-#dowB5{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 860px;
-    top: 505px;
-}
-#dowB6{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 1160px;
-    top: 505px;
-}
-#dowB7{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 560px;
-    top: 625px;
-}
-#dowB8{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 860px;
-    top: 625px;
-}
-#dowB9{
-    position: absolute;
-    width: 20px;
-    height: 20.11px;
-    left: 1160px;
-    top: 625px;
-}
+
 #mon{
     position: absolute;
     width: 1253px;
     height: 86px;
     left: 0px;
     top: 80px;
-    color: #51504F;
+    color: #463C35;
     font-family: 'Noto Sans Thai';
     font-style: normal;
     font-weight: 400;

@@ -24,7 +24,8 @@ urlpatterns = [
     path("main/",views.main, name="main"),
     path("",include('authen.urls')),
     path("", views.main),
-    path("viewProfile/", views.viewProfile),
-    path("changeProfile/", views.viewProfile, name="changeProfile"),
+    path("viewProfile/", authen.views.viewProfile),
     path("suadPrajum/",views.suadPrajum),
+    path("totalD/",views.totalD),
+    path("",include('chanting.urls')),
 ]

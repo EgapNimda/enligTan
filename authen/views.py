@@ -69,16 +69,12 @@ def signOut(request):
     messages.success(request,"Logged Out Successfully")
     return render(request,"main.html")
 
-def changeProfile(request):
-    if request.method == 'POST':
-        newusername = request.POST['username']
-        newemail = request.POST['email']
-        print(request.user.username)
-        use = User.objects.get(username=request.user.username)
-        use.update(username=newusername)
-        use.update(email=newemail)
-    return redirect('signIn')
-
 def viewProfile(request):
-  
+    if request.method == 'POST':
+        use = User.objects.get(username=request.user.username)
+        use.username = request.POST.get('username')
+        use.email = request.POST.get('email')
+        use.save()
+        return redirect(request.META['HTTP_REFERER'])
+
     return render(request, "viewProfile.html")

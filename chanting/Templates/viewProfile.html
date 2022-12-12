@@ -58,7 +58,7 @@
     <!-- The form -->
     <link rel="stylesheet" href ="{% static 'css/popup.css' %}">
     <div class="form-popup" id="myForm">
-        <form action="/changeProfile/" class="form-container" method="POST">
+        <form action="/viewProfile/" class="form-container" method='POST'>
             {% csrf_token %}
   
             <label for="username"><b>Username</b></label>

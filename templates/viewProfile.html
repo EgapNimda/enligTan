@@ -11,7 +11,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Noto+Serif+SC&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400&display=swap" rel="stylesheet">
 
-   <meta http-equiv="refresh" content="10000">
+   <!-- <meta http-equiv="refresh" content="4"> -->
 
 </head>
 <body>
@@ -23,24 +23,52 @@
         style="width:25px;height:25px">
     </lord-icon> -->
 
-    <!-- background image-->
-    <!-- <img class="bg" src="/enlighTan-kaidip/static/img/Rectangle 65.png" width="1500" height="10">
-    <img class="upr" rc="/enlighTan-kaidip/static/img/Rectangle 65.png" > -->
-    <!-- <img class="pra" src="/enlighTan-kaidip/static/img/พระองค์ส้ม.png" width="517"height="519"top="188px"> -->               
-    
     <a  href="main.html"><h1 class="title">EnlighTan</h1></a>
     
     <div class="profileFrame"></div>
     
-    <div class="propic"></div>
+    <!-- <div><img class="propic" src="D:\Year2 S1\Info System\Enlightannnnn\static\img\profile_pic.jpg"></div> -->
 
     <div class="chantFrame"></div>
 
     <div>
+        <div class="usernameFix">Username</div>
         <div class="username">(username)</div>
+        <div class="mailFix">Email Address</div>
         <div class="mail">(email)</div>
         <button class="signOut">ออกจากระบบ</button>
+
+    <!-- editProfile     -->
         <button class="editProfile">แก้ไขข้อมูลส่วนตัว</button>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+        </div>
+        <!-- The form -->
+        <link rel="stylesheet" href ="{% static 'css/popup.css' %}">
+        <div class="form-popup" id="myForm">
+            <form action="/viewProfile/" class="form-container" method='POST'>
+                {% csrf_token %}
+    
+                <label for="username" class="usernameEdit">Username</label>
+                <input type="text" id="usernamebar" placeholder="Enter new Username" name="username" required>
+    
+                <label for="email" class="emailEdit">Email</label>
+                <input type="text" id="emailbar" placeholder="Enter new Email" name="email" required>
+    
+                <button type="submit" class="btn">reset</button>
+                <button type="button" class="btnClose" onclick="closeForm()">close</button>
+    
+            </form>
+        </div>
+
+        <button class="deleteUser">ลบบัญชีผู้ใช้</button>
     </div>
 
     <div class="head">บทสวดมนต์ที่ชื่นชอบ</div>
@@ -48,34 +76,33 @@
     <div class="containAllButton">
         <div class="column1">
             <input type="button" value="ชื่อบทสวด" id="fav1">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB1').name='2'}else{ getElementById('dowB1').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB1').name='1'};">
+    
             <input type="button" value="ชื่อบทสวด" id="fav3">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB3" onclick="if(getElementById('dowB3').name=='1'){getElementById('dowB3').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB3').name='2'}else{ getElementById('dowB3').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB3').name='1'};">
+                
             <input type="button" value="ชื่อบทสวด" id="fav5">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB5" onclick="if(getElementById('dowB5').name=='1'){getElementById('dowB5').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB5').name='2'}else{ getElementById('dowB5').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB5').name='1'};">
+    
             <input type="button" value="ชื่อบทสวด" id="fav7">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB7" onclick="if(getElementById('dowB7').name=='1'){getElementById('dowB7').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB7').name='2'}else{ getElementById('dowB7').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB7').name='1'};">
+    
         </div>
         <div class="column2">
-            <input type="button" value="ชื่อบทสวด" id="fav2">
+            <input type="button" value="ชื่อบทสวด2" id="fav2">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB2" onclick="if(getElementById('dowB2').name=='1'){getElementById('dowB2').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB2').name='2'}else{ getElementById('dowB2').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB2').name='1'};">
+            
             <input type="button" value="ชื่อบทสวด" id="fav4">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB4" onclick="if(getElementById('dowB4').name=='1'){getElementById('dowB4').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB4').name='2'}else{ getElementById('dowB4').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB4').name='1'};">
+    
             <input type="button" value="ชื่อบทสวด" id="fav6">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB6" onclick="if(getElementById('dowB6').name=='1'){getElementById('dowB6').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB6').name='2'}else{ getElementById('dowB6').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB6').name='1'};">
+    
             <input type="button" value="ชื่อบทสวด" id="fav8">
+            <img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.svg" name="1" id ="dowB8" onclick="if(getElementById('dowB8').name=='1'){getElementById('dowB8').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/starYellow.svg';getElementById('dowB8').name='2'}else{ getElementById('dowB8').src='D:/Year2 S1/Info System/Enlightannnnn/static/img/star.svg';getElementById('dowB8').name='1'};">
+    
         </div>
     </div>
 
-    <!-- <button class="star1" onclick="change()" id="star1"><img src="D:\Year2 S1\Info System\Enlightannnnn\static\img\star.png"> </div> -->
-<!--     
-    <button type="submit">
-        <img src="https://i.ibb.co/CW5Wvry/buttonpng.png" alt="buttonpng">
-    </button> -->
-
-    <!-- <script>
-        function change(){
-            var img = document.getElementById('star1');
-            img.src = "filled_star.png";
-        }
-    </script> -->
-
-    
-
   
 </body>
- 
-

@@ -40,12 +40,38 @@
     <div class="chantFrame"></div>
 
     <div>
-        <div class="username">{{request.user.username}</div>
+        <div class="username">{{request.user.username}}</div>
         <div class="mail">{{request.user.email}}</div>
-        <button class="signOut" onclick="location.href='/signOut'"">ออกจากระบบ</button>
-        <button class="editProfile">แก้ไขข้อมูลส่วนตัว</button>
-    </div>
+        <button class="signOut" onclick="location.href='/signOut'">ออกจากระบบ</button>
+        <button class="editProfile" onclick="openForm();" >แก้ไขข้อมูลส่วนตัว</button>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
 
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+        
+    </div>
+    <!-- The form -->
+    <link rel="stylesheet" href ="{% static 'css/popup.css' %}">
+    <div class="form-popup" id="myForm">
+        <form action="/changeProfile/" class="form-container" method="POST">
+            {% csrf_token %}
+  
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter new Username" name="username" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter new Email" name="email" required>
+  
+            <button type="submit" class="btn">reset</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            
+        </form>
+    </div>
     <div class="head">บทสวดมนต์ที่ชื่นชอบ</div>
     
     <div class="containAllButton">

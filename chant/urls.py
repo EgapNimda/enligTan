@@ -25,5 +25,6 @@ urlpatterns = [
     path("",include('authen.urls')),
     path("", views.main),
     path("viewProfile/", views.viewProfile),
-    path("suadPrajum/",views.suadPrajum)
+    path("changeProfile/", views.viewProfile, name="changeProfile"),
+    path("suadPrajum/",views.suadPrajum),
 ]

@@ -34,11 +34,42 @@ def month_converter(month):
         return months.index(month) + 1
 
 
+# def monk_day():
+#     today = date.today()
+#     day = today.strftime("%d/%m/%Y")
+#     period = scraping()
+#     return day[:len(day)-5] in period
+
 def monk_day():
     today = date.today()
-    day = today.strftime("%d/%m/%Y")
+    dmy = today.strftime("%d/%m/%Y")
     period = scraping()
-    return day[:len(day)-5] in period
+    day,month,year = dmy.split('/')
+    day = int(day)
+    month = int(month)
+    year = int(month)
+    distance = -1
+    for i in range (0,len(period)):
+        pd,pm = period[i].split("/")
+        pd = int(pd)
+        pm = int(pm)
+    
+        if(pm == month):
+            if(day <= pd):
+                distance = pd-day
+                break
+        if pm > month and distance == -1:
+            if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
+                distance = pd + 31 - day
+                break
+            elif month == 4 or month == 6 or month == 9 or month == 11:
+                distance = pd + 30 - day
+                break
+            
+            else:
+                distance = pd + 28 - day
+                break
+    return distance
 
 
 

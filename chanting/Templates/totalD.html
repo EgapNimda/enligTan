@@ -18,36 +18,17 @@
     
     <a href="/viewProfile"><button id="log">ดูโปรไฟล์</button></a>
     
-    <input type="button" value="บทสวดที่1" id="p1">
-    <input type="button" value="บทสวดที่2" id="p2">
-    <input type="button" value="บทสวดที่3" id="p3">
-    <input type="button" value="บทสวดที่4" id="p4">
-    <input type="button" value="บทสวดที่5" id="p5">
-    <input type="button" value="บทสวดที่6" id="p6">
-    <input type="button" value="บทสวดที่7" id="p7">
-    <input type="button" value="บทสวดที่8" id="p8">
-    <input type="button" value="บทสวดที่9" id="p9">
+    <a  href="{% url 'set' title=ok n=1 %}"><button  id="p1">{{ok}}</a>
+        <a  href="{% url 'set' title=khao n=1 %}"><button  id="p2">{{khao}}</a>
+        <a  href="{% url 'set' title=maka n=1 %}"><button  id="p3">{{maka}}</a>
+        <a  href="{% url 'set' title=visaka n=1 %}"><button  id="p4">{{visaka}}</a>
+        <a  href="{% url 'set' title=asa n=1 %}"><button  id="p5">{{asa}}</a>
+        <a  href="{% url 'set' title=atha n=1 %}"><button  id="p6">{{atha}}</a>
     <h1 id="mon">บทสวดทั้งหมด</h1>
-    <script>
-        var staticURL = "{% static '' %}";
-        function getStatic (URL) {
-            let fullURL = staticURL + URL;
-            return fullURL;
-        };
-        
-    </script>
-    <img src='{% static "img/star.svg" %}' name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src = getStatic('img/Star 3.png');getElementById('dowB1').name='2';}else{ getElementById('dowB1').src=getStatic('img/star.svg');getElementById('dowB1').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB2" onclick="if(getElementById('dowB2').name=='1'){getElementById('dowB2').src = getStatic('img/Star 3.png');getElementById('dowB2').name='2'}else{ getElementById('dowB2').src=getStatic('img/star.svg');getElementById('dowB2').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB3" onclick="if(getElementById('dowB3').name=='1'){getElementById('dowB3').src = getStatic('img/Star 3.png');getElementById('dowB3').name='2'}else{ getElementById('dowB3').src=getStatic('img/star.svg');getElementById('dowB3').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB4" onclick="if(getElementById('dowB4').name=='1'){getElementById('dowB4').src = getStatic('img/Star 3.png');getElementById('dowB4').name='2'}else{ getElementById('dowB4').src=getStatic('img/star.svg');getElementById('dowB4').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB5" onclick="if(getElementById('dowB5').name=='1'){getElementById('dowB5').src = getStatic('img/Star 3.png');getElementById('dowB5').name='2'}else{ getElementById('dowB5').src=getStatic('img/star.svg');getElementById('dowB5').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB6" onclick="if(getElementById('dowB6').name=='1'){getElementById('dowB6').src = getStatic('img/Star 3.png');getElementById('dowB6').name='2'}else{ getElementById('dowB6').src=getStatic('img/star.svg');getElementById('dowB6').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB7" onclick="if(getElementById('dowB7').name=='1'){getElementById('dowB7').src = getStatic('img/Star 3.png');getElementById('dowB7').name='2'}else{ getElementById('dowB7').src=getStatic('img/star.svg');getElementById('dowB7').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB8" onclick="if(getElementById('dowB8').name=='1'){getElementById('dowB8').src = getStatic('img/Star 3.png');getElementById('dowB8').name='2'}else{ getElementById('dowB8').src=getStatic('img/star.svg');getElementById('dowB8').name='1'};">
-    <img src="{% static 'img/star.svg' %}" name="1" id ="dowB9" onclick="if(getElementById('dowB9').name=='1'){getElementById('dowB9').src = getStatic('img/Star 3.png');getElementById('dowB9').name='2'}else{ getElementById('dowB9').src=getStatic('img/star.svg');getElementById('dowB9').name='1'};">
+    
+    
     {% else %}
-    <h1 id="noti">กรุณาเข้าสู่ระบบ</h1>
-    <a href="/signIn"><button class="loginbut">เข้าสู่ระบบ</button></a>
+    <meta http-equiv="REFRESH" content="0;/signIn">
     {% endif %}
 </body>
 </html>

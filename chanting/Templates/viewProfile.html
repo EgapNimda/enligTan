@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="{% static 'css/viewProfile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/viewProfile.css' %}">
+   <link rel="stylesheet" href ="{% static 'css/popup.css' %}">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +40,22 @@
         <div class="mailFix">Email Address</div>
         <div class="mail">{{request.user.email}}</div>
         <button class="signOut" onclick="location.href='/signOut'">ออกจากระบบ</button>
-
+        
+        <div class="form-popup" id="myForm">
+            <form action="/viewProfile/" class="form-container" method='POST'>
+                {% csrf_token %}
+    
+                <label for="username" class="usernameEdit">Username</label>
+                <input type="text" id="usernamebar" placeholder="Enter new Username" name="username" required>
+    
+                <label for="email" class="emailEdit">Email</label>
+                <input type="text" id="emailbar" placeholder="Enter new Email" name="email" required>
+    
+                <button type="submit" class="btn">change</button>
+                <button type="button" class="btnClose" onclick="closeForm()">close</button>
+    
+            </form>
+        </div>
     <!-- editProfile     -->
         <button class="editProfile" onclick="openForm();">แก้ไขข้อมูลส่วนตัว</button>
         <script>
@@ -52,24 +69,10 @@
         </script>
         </div>
         <!-- The form -->
-        <!-- <link rel="stylesheet" href ="{% static 'css/popup.css' %}"> -->
-        <div class="form-popup" id="myForm">
-            <form action="/viewProfile/" class="form-container" method='POST'>
-                {% csrf_token %}
-    
-                <label for="username" class="usernameEdit">Username</label>
-                <input type="text" id="usernamebar" placeholder="Enter new Username" name="username" required>
-    
-                <label for="email" class="emailEdit">Email</label>
-                <input type="text" id="emailbar" placeholder="Enter new Email" name="email" required>
-    
-                <button type="submit" class="btn">reset</button>
-                <button type="button" class="btnClose" onclick="closeForm()">close</button>
-    
-            </form>
-        </div>
+        
+        
 
-        <button class="deleteUser">ลบบัญชีผู้ใช้</button>
+        <a href="/deleteUser"><button class="deleteUser">ลบบัญชีผู้ใช้</button></a>
     </div>
 
     <div class="head">บทสวดมนต์ที่ชื่นชอบ</div>

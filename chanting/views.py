@@ -59,9 +59,28 @@ def suadPrajum(request):
     return render(request, "suadPrajum.html",context)
 
 def sevenday(request):
-    return render(request, "7day.html")
+    context = {
+        "monday" : 'วันจันทร์',
+        "tuesday" : 'วันอังคาร',
+        "wednesday" : 'วันพุธ',
+        "thursday" : 'วันพฤหัส',
+        "friday" : 'วันศุกร์',
+        "saturday" : 'วันเสาร์',
+        "sunday" : 'วันอาทิตย์',
+        "n" : '1',
+    }
+    return render(request, "7day.html",context)
 def totalD(request):
-    return render(request, "totalD.html")
+    context = {
+        "ok" : "บทสวดประจำวันออกพรรษา",
+        "khao" : 'บทสวดประจำวันเข้าพรรษา',
+        "maka" : 'บทสวดวันมาฆบูชา',
+        "visaka" : "บทสวดวันวิสาขบูชา",
+        "asa" : "บทสวดวันอาสาฬหบูชา",
+        "atha" : "บทสวดวันอัฏฐมีบูชา",
+        "n" : '1',
+    } 
+    return render(request, "totalD.html",context)
 def set(request,title,n):
     context = {}
     if(prayingset.objects.filter(title = title)):
@@ -69,11 +88,11 @@ def set(request,title,n):
         ps = prayingset.objects.get(title = title)
         prlist = ps.set.all()
         n = int(n)
+        context.update( {"next" : str(n+1)} )
         n = n-1
         for i in range (n*9,len(prlist)):
             key = "p" + str( (i % 9) + 1)
             context.update( {key : prlist[i].title})
-    else:
-        context = {'ptitle' : "ไม่พบข้อมูลในคลังบทสวด555"}
+
     return render(request,"set.html",context)
 

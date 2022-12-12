@@ -61,7 +61,7 @@ h1{
 
 .profileFrame{
  box-sizing: border-box;
-
+ 
  position: absolute;
  width: 403px;
  height: 484px;
@@ -112,7 +112,7 @@ h1{
  position: absolute;
  width: 97px;
  height: 24px;
- left: 217px;
+ left: 110px;
  top: 192px;
  
  font-family: 'Inter';
@@ -130,7 +130,7 @@ h1{
  position: absolute;
  width: 302px;
  height: 29px;
- left: 198.5px;
+ left: 110px;
  top: 216px;
  
  font-family: 'Inter';
@@ -152,7 +152,7 @@ h1{
  position: absolute;
  width: 134px;
  height: 24px;
- left: 194px;
+ left: 110px;
  top: 269px;
 
  font-family: 'Inter';
@@ -170,7 +170,7 @@ h1{
  position: absolute;
  width: 357px;
  height: 29px;
- left: 225px;
+ left: 110px;
  top: 293px;
  
  font-family: 'Inter';
@@ -248,13 +248,6 @@ h1{
  color: #fff4c7;
 }
 
-.form-popup{
- /* position: absolute;
- width: 175px;
- height: 33px;
- left: 178px;
- top: 390px; */
-}
 
 .form-popup .form-container .usernameEdit{
  font-family: 'Inter', 'san-serif';
@@ -263,13 +256,13 @@ h1{
  position: absolute;
  top: 420px;
  left: 110px;
+ z-index:6
 }
 
 #usernamebar{
  font-family: 'Inter', 'san-serif';
  font-size: 18px;
- color:rgb(227, 227, 227);
-
+ color:rgb(1, 0, 0);
  position: absolute;
  width:200px;
  top: 420px;
@@ -278,6 +271,13 @@ h1{
  background-color: #ede5ab6f;
  border-radius: 8px;
  border:none;
+ z-index:6
+}
+.form-popup{
+  position: absolute;
+ top: 0px;
+ left:0px;
+ border:None;
 }
 
 .form-popup .form-container .emailEdit{
@@ -307,9 +307,9 @@ h1{
 
 .btn{
  position: absolute;
- width:60px;
+ width:75px;
  height:25px;
- left:200px;
+ left:190px;
  top: 520px;
  font-size:18px;
  background: #ede5ab6f;

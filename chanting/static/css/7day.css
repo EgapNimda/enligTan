@@ -42,6 +42,7 @@ html,body{
 #log:hover{
     color: var(--accentHover);
 }
+
 #dok1{
     position: absolute;
     width: 154px;

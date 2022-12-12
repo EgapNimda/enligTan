@@ -95,9 +95,9 @@ h1{
 
 .chantingName{
     position: absolute;
-    width: 674px;
+    width: 100%;
     height: 102px;
-    left: 475px;
+    left: 79px;
     top: 114px;
 
     font-family: 'Noto Sans Thai', 'sans-serif';

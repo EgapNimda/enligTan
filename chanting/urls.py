@@ -3,5 +3,6 @@ from django.urls import path
 from chanting import views
 
 urlpatterns = [
-    path("chanting/<title>",views.chanting),
+    path("chanting/<title>",views.chanting,name="chanting"),
+    path("set/<title>",views.set,name = "set"),
 ]

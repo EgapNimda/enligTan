@@ -1,7 +1,7 @@
 
 from django.http import HttpResponse
 from django.template import loader
-from chanting.time import monk_day
+#from chanting.time import monk_day
 from django.shortcuts import render
 from .models import praying, prayingset
 
@@ -26,7 +26,7 @@ def main(request):
 
     else:
         s = ""    '''
-    n = monk_day()
+    '''n = monk_day()
     if(n == 0):
         context = {'monk' : "วันนี้วันพระ"}
     elif(n == 1):
@@ -34,7 +34,9 @@ def main(request):
     elif(n == -1):
         context = {'monk' : "หมดปีแล้วจ้า:)"}
     else:
-        context = {'monk' : "อีก " + str(n) + " วันจะถึงวันพระ"}
+        context = {'monk' : "อีก " + str(n) + " วันจะถึงวันพระ"}'''
+
+    context = {"monk" : "วันนี้วันพระ"}
     return render(request,"main.html",context)
 
 
@@ -52,6 +54,19 @@ def chanting(request,title):
             "content" : "ไม่พบข้อมูลในคลังบทสวด"
         }
     return render(request,"chanting.html",context)
+
+def set(request,title):
+    context = {}
+    if(prayingset.objects.filter(title = title)):
+        ps = prayingset.objects.get(title = title)
+        prlist = ps.set.all()
+        for i in range (0,len(prlist)):
+            key = "p" + str(i+1)
+            context.update( {key : prlist[i].title})
+            print(context)
+    return render(request,"set.html",context)
+        
+
 
 def suadPrajum(request):
     return render(request, "suadPrajum.html")

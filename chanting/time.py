@@ -1,5 +1,5 @@
 
-import requests
+'''import requests
 import time
 from requests_html import HTMLSession
 from datetime import date
@@ -69,7 +69,7 @@ def monk_day():
             else:
                 distance = pd + 28 - day
                 break
-    return distance
+    return distance'''
 
 
 

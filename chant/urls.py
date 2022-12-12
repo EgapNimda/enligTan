@@ -26,6 +26,7 @@ urlpatterns = [
     path("", views.main),
     path("viewProfile/", authen.views.viewProfile),
     path("suadPrajum/",views.suadPrajum),
+    path("7day/",views.sevenday),
     path("totalD/",views.totalD),
     path("",include('chanting.urls')),
 ]

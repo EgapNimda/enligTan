@@ -4,4 +4,5 @@ from chanting import views
 
 urlpatterns = [
     path("chanting/<title>",views.chanting),
+    path("set/<title>/<n>",views.set,name = "set"),
 ]

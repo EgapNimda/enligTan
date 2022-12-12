@@ -78,3 +78,8 @@ def viewProfile(request):
         return redirect(request.META['HTTP_REFERER'])
 
     return render(request, "viewProfile.html")
+
+def deleteAccount(request):
+    User.objects.filter(username=request.user.username).delete()
+    
+    return redirect('singOut')

@@ -118,11 +118,12 @@ h1{
 
 .say{
     position: absolute;
-    width: 754px;
+    width: 1253px;
     height: 125px;
-    left: 37%;
+    left: 0px;
     top: 213px;
-
+    
+    
     font-family: 'Noto Sans Thai', 'sans-serif';
     font-style: normal;
     font-size: 80px;

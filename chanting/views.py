@@ -2,6 +2,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from chanting.time import monk_day
+from chanting.time import checkDay
 from django.shortcuts import render
 from .models import praying, prayingset
 
@@ -54,7 +55,25 @@ def chanting(request,title):
     return render(request,"chanting.html",context)
 
 def suadPrajum(request):
-    return render(request, "suadPrajum.html")
+    context={'day': checkDay()}
+    return render(request, "suadPrajum.html",context)
+
+def sevenday(request):
+    return render(request, "7day.html")
 def totalD(request):
     return render(request, "totalD.html")
+def set(request,title,n):
+    context = {}
+    if(prayingset.objects.filter(title = title)):
+        context = {'ptitle' : title}
+        ps = prayingset.objects.get(title = title)
+        prlist = ps.set.all()
+        n = int(n)
+        n = n-1
+        for i in range (n*9,len(prlist)):
+            key = "p" + str( (i % 9) + 1)
+            context.update( {key : prlist[i].title})
+    else:
+        context = {'ptitle' : "ไม่พบข้อมูลในคลังบทสวด555"}
+    return render(request,"set.html",context)
 

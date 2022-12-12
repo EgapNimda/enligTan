@@ -7,7 +7,16 @@ html,body{
     height: 100%;
     overflow: auto;
 }
+.nextpage{
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 1070px;
+    top: 695px;
 
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 32px;
+}
 .upr{
     width: 1253px;
     height: 208px;
@@ -39,7 +48,7 @@ html,body{
     background-color: #FFFFFF;
     padding: 8px 25px;
     transition: var(--transition);
-    
+    font-family:'Noto Sans Thai';
 }
 #log:hover{
     color: var(--accentHover);
@@ -54,7 +63,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family:'Noto Sans Thai';
     font-style: normal;
     display: flex;
     justify-content: center;
@@ -78,7 +87,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -101,7 +110,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
 
@@ -124,7 +133,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -146,7 +155,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -168,7 +177,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -191,7 +200,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -214,7 +223,7 @@ html,body{
     background: rgba(201, 177, 93, 0.94);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     justify-content: center;
     align-items: center;
@@ -250,7 +259,7 @@ html,body{
 #p9:hover{
     background-color: #FFE8D6;
 }
-.title{      
+#etan{      
     position: absolute;
     left: 3.35%;
     right: 75.1%;
@@ -273,7 +282,24 @@ html,body{
     text-shadow: 4px 5px 6px rgba(0, 0, 0, 0.38);
     
 }
-
+#sear{
+    border-radius: 30pt;
+    position: absolute;
+    width: 530px;
+    height: 47.45px;
+    left: 395px;
+    top: 246px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.seaBar{
+    position: absolute;
+    left:890px;
+    top: 260px;
+}
 #dowB1{
     position: absolute;
     width: 20px;
@@ -344,7 +370,7 @@ html,body{
     left: 0px;
     top: 100px;
 
-    font-family: 'Inter';
+    font-family: 'Noto Sans Thai';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;

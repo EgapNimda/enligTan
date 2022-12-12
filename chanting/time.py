@@ -3,7 +3,7 @@ import requests
 import time
 from requests_html import HTMLSession
 from datetime import date
-
+import calendar
 
 def scraping():
     session = HTMLSession()
@@ -72,4 +72,15 @@ def monk_day():
     return distance
 
 
-
+def checkDay():
+    d = date.today()
+    x = calendar.day_name[d.weekday()]
+    day = {'Monday':'วันจันทร์', 
+           'Tuesday':'วันอังคาร',
+           'Wednesday':'วันพุธ',
+           'Thursday':'วันพฤหัส',
+           'Friday':'วันศุกร์',
+           'Saturday':'วันเสาร์',
+           'Sunday':'วันอาทิตย์'}
+        
+    return day[x]

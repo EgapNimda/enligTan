@@ -15,8 +15,18 @@
     <img src="/static/img/Rectangle 60.png" class="upr">
     <img src="/static/img/Group 3.png" class="pra">
     <h1 id="etan">EnlighTan</h1>
-    <input type="button" value="เข้าสู่ระบบ"id="log">
-    <input type="text" placeholder="   type to search ..." id="sear">
+    
+    <div>
+        {% if user.is_authenticated %}
+
+        <!-- ปุ่มดูหน้าโปรไฟล์ -->
+        <a href="/viewProfile"><button id="log">ดูโปรไฟล์</button></a>
+        {% else %}
+        <!-- ปุ่มเข้าสู่ระบบ -->
+        <a href="/signIn"><button id="log">เข้าสู่ระบบ</button></a>
+        {% endif %}
+    </div>   
+    <!-- <input type="text" placeholder="   type to search ..." id="sear"> -->
     {% if p1 %}
     <a href="{% url 'chanting' title=p1 %}"><button id = "p1">{{p1}}</button></a>
     {% endif %}
@@ -53,8 +63,13 @@
     <a href="{% url 'chanting' title=p9 %}"><button id = "p9">{{p9}}</button></a>
     {% endif %}
 
+    {% if ptitle %}
     <h1 id="mon">{{ptitle}}</h1>
-    <img src="/static/img/star.svg" name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src='/static/img/Star 3.png';getElementById('dowB1').name='2'}else{ getElementById('dowB1').src='/static/img/star.svg';getElementById('dowB1').name='1'};">
+    {% else %}
+    <h1 id="mon">ไม่พบข้อมูลในคลังบทสวด555</h1>
+    {% endif %}
+    
+    <!-- <img src="/static/img/star.svg" name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src='/static/img/Star 3.png';getElementById('dowB1').name='2'}else{ getElementById('dowB1').src='/static/img/star.svg';getElementById('dowB1').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB2" onclick="if(getElementById('dowB2').name=='1'){getElementById('dowB2').src='/static/img/Star 3.png';getElementById('dowB2').name='2'}else{ getElementById('dowB2').src='/static/img/star.svg';getElementById('dowB2').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB3" onclick="if(getElementById('dowB3').name=='1'){getElementById('dowB3').src='/static/img/Star 3.png';getElementById('dowB3').name='2'}else{ getElementById('dowB3').src='/static/img/star.svg';getElementById('dowB3').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB4" onclick="if(getElementById('dowB4').name=='1'){getElementById('dowB4').src='/static/img/Star 3.png';getElementById('dowB4').name='2'}else{ getElementById('dowB4').src='/static/img/star.svg';getElementById('dowB4').name='1'};">
@@ -63,7 +78,15 @@
     <img src="/static/img/star.svg" name="1" id ="dowB7" onclick="if(getElementById('dowB7').name=='1'){getElementById('dowB7').src='/static/img/Star 3.png';getElementById('dowB7').name='2'}else{ getElementById('dowB7').src='/static/img/star.svg';getElementById('dowB7').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB8" onclick="if(getElementById('dowB8').name=='1'){getElementById('dowB8').src='/static/img/Star 3.png';getElementById('dowB8').name='2'}else{ getElementById('dowB8').src='/static/img/star.svg';getElementById('dowB8').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB9" onclick="if(getElementById('dowB9').name=='1'){getElementById('dowB9').src='/static/img/Star 3.png';getElementById('dowB9').name='2'}else{ getElementById('dowB9').src='/static/img/star.svg';getElementById('dowB9').name='1'};">
-    <img src="/static/img/🦆 icon _search_.png" class="seaBar">
-    <a href="ลิ้งไปสักหน้า"><button class="nextpage">หน้าถัดไป</button></a>
+    <img src="/static/img/🦆 icon _search_.png" class="seaBar"> -->
+
+    {% if continue %}
+    <a href="{% url 'set' title=ptitle n=next %}"><button class="nextpage">หน้าถัดไป</button></a>
+    {% endif %}
+
+    {% if back %}
+    <a href="{% url 'set' title=ptitle n=back %}"><button class="previous">หน้าก่อนหน้า</button></a>
+    {% endif %}
+
 </body>
 </html>

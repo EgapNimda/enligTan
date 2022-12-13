@@ -62,18 +62,47 @@ def set(request,title,n):
         ps = prayingset.objects.get(title = title)
         prlist = ps.set.all()
         n = int(n)
+        context.update( {"next" : str(n+1)} )
         n = n-1
         for i in range (n*9,len(prlist)):
+            if(i - (n*9) == 9):
+                break
             key = "p" + str( (i % 9) + 1)
             context.update( {key : prlist[i].title})
-    else:
-        context = {'ptitle' : "ไม่พบข้อมูลในคลังบทสวด555"}
+        if(i+1 < len(prlist)):
+            context.update({"continue" : "continue"})
+        if(n > 0) :
+            context.update({"back" : str(n)})
+            
     return render(request,"set.html",context)
         
+def sevenday(request):
+    context = {
+        "monday" : 'วันจันทร์',
+        "tuesday" : 'วันอังคาร',
+        "wednesday" : 'วันพุธ',
+        "thursday" : 'วันพฤหัส',
+        "friday" : 'วันศุกร์',
+        "saturday" : 'วันเสาร์',
+        "sunday" : 'วันอาทิตย์',
+        "n" : '1',
+    }
+    return render(request, "7day.html",context)
 
-
-def suadPrajum(request):
-    return render(request, "suadPrajum.html")
 def totalD(request):
-    return render(request, "totalD.html")
+    context = {
+        "ok" : "บทสวดประจำวันออกพรรษา",
+        "khao" : 'บทสวดประจำวันเข้าพรรษา',
+        "maka" : 'บทสวดวันมาฆบูชา',
+        "visaka" : "บทสวดวันวิสาขบูชา",
+        "asa" : "บทสวดวันอาสาฬหบูชา",
+        "atha" : "บทสวดวันอัฏฐมีบูชา",
+        "n" : '1',
+    } 
+    return render(request, "totalD.html",context)
+
+
+
+
+
 

@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import get_user_model
-
 User = get_user_model()
 
 
@@ -16,24 +15,26 @@ def signUp(request):
         password = request.POST['password']
         conpassword = request.POST['conpassword']
         if User.objects.filter(username=username):
-            messages.error(request,"Username already exist! Plase try some either")
-            return redirect('signin')
+            messages.error(request,"Username already exist!")
+            return redirect('signUp')
         if User.objects.filter(email=email):
-            messages.error(request,"Email already exist! Plase try some either")
-            return redirect('signin')
+            messages.error(request,"Email already exist!")
+            return redirect('signUp')
         
         if len(username)>10:
             messages.error(request,"Username must be under 10 characters")
+            return redirect('signUp')
         if password!=conpassword:
-            messages.error(request,"Passwords didn't match")
+            messages.error(request,"Passwords did not match")
+            return redirect('signUp')
         if not  username.isalnum():
             messages.error(request,"Username must be alphanumeric")
-            return redirect('signin')
+            return redirect('signUp')
 
         myuser=User.objects.create_user(username,email,password)
         myuser.first_name=username
         myuser.save()
-        return render(request,"main.html")
+        return redirect('main')
 
     return render(request,"signUp.html")
 
@@ -49,16 +50,15 @@ def signIn(request):
                 if user is not None:
                     user = authenticate(username=user.username, password=password)
                     login(request,user)
-                    return render(request,"main.html")
+                    return redirect('main')
                 else:
                     return redirect('signIn')
             else:
-                messages.error(request, "Bad")
+                messages.error(request,"Passwords is not valid")
                 return redirect('signIn')
-                
-        
+    
         else:
-            messages.error(request, "Bad")
+            messages.error(request, "Username Innvalid")
             return redirect('signIn')
 
     return render(request, 'signIn.html')
@@ -66,8 +66,7 @@ def signIn(request):
 
 def signOut(request):
     logout(request)
-    messages.success(request,"Logged Out Successfully")
-    return render(request,"main.html")
+    return redirect('main')
 
 def viewProfile(request):
     if request.method == 'POST':

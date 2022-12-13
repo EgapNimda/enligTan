@@ -12,9 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
 </head>
 <body>
+    {% if user.is_authenticated %}
     <img src="/static/img/Rectangle 60.png" class="upr">
     <img src="/static/img/Group 3.png" class="pra">
-    <h1 id="etan">EnlighTan</h1>
+    <a  href="/main"><h1 id="etan">EnlighTan</h1></a>
     
     <div>
         {% if user.is_authenticated %}
@@ -68,6 +69,9 @@
     {% else %}
     <h1 id="mon">ไม่พบข้อมูลในคลังบทสวด555</h1>
     {% endif %}
+    {% if continue %}
+    <a href="{% url 'set' title=ptitle n=next %}"><button class="nextpage">หน้าถัดไป</button></a>
+    {% endif %}
     
     <!-- <img src="/static/img/star.svg" name="1" id ="dowB1" onclick="if(getElementById('dowB1').name=='1'){getElementById('dowB1').src='/static/img/Star 3.png';getElementById('dowB1').name='2'}else{ getElementById('dowB1').src='/static/img/star.svg';getElementById('dowB1').name='1'};">
     <img src="/static/img/star.svg" name="1" id ="dowB2" onclick="if(getElementById('dowB2').name=='1'){getElementById('dowB2').src='/static/img/Star 3.png';getElementById('dowB2').name='2'}else{ getElementById('dowB2').src='/static/img/star.svg';getElementById('dowB2').name='1'};">
@@ -83,6 +87,12 @@
     {% if ptitle %}
     <a href="{% url 'set' title=ptitle n=next %}"><button class="nextpage">หน้าถัดไป</button></a>
     {% endif %}
+    {% if back %}
+    <a href="{% url 'set' title=ptitle n=back %}"><button class="previous">หน้าก่อนหน้า</button></a>
+    {% endif %}
 
+    {% else %}
+    <meta http-equiv="REFRESH" content="0;/signIn">
+    {% endif %}
 </body>
 </html>

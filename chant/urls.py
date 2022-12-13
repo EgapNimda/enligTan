@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from chanting import views
 import authen
-
-
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("main/",views.main, name="main"),
@@ -29,4 +29,4 @@ urlpatterns = [
     path("7day/",views.sevenday),
     path("totalD/",views.totalD),
     path("",include('chanting.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

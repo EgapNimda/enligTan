@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 from  os import *
 import mimetypes
-
+import django_extensions
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -44,8 +44,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'authen',
     'chanting',
+    'django_extensions',
+    
 ]
-
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+}
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -121,9 +126,11 @@ STATICFILES_DIRS = [
     './chanting/static'
 ]
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/audio/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 mimetypes.add_type("image/svg+xml", ".svg", True)
+

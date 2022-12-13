@@ -411,7 +411,7 @@ html,body{
 
 #mon{
     position: absolute;
-    width: 1253px;
+    width: 1250px;
     height: 86px;
     left: 0px;
     top: 80px;
@@ -425,4 +425,5 @@ html,body{
     align-items: center;
     text-align: center;
     justify-content: center;
+    
 }

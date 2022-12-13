@@ -12,7 +12,7 @@ html,body{
     width: 130px;
     height: 33px;
     left: 1070px;
-    top: 695px;
+    top: 660px;
 
     background: rgba(217, 217, 217, 0.5);
     border-radius: 32px;
@@ -22,6 +22,16 @@ html,body{
     height: 208px;
     left: 0px;
     top: 0px;
+}
+.previous{
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 370px;
+    top: 660px;
+
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 32px;
 }
 .downr{
     width: 874px;
@@ -56,7 +66,7 @@ html,body{
 #p1{
     position: absolute;
     left:350px;
-    top: 380px;
+    top:280px;
     position: absolute;
     width: 242px;
     height: 66px;
@@ -72,6 +82,9 @@ html,body{
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    overflow: hidden;
     
 }
 #p1:hover{
@@ -80,7 +93,7 @@ html,body{
 #p2{
     position: absolute;
     left:350px;
-    top: 500px;
+    top: 420px;
     position: absolute;
     width: 242px;
     height: 66px;
@@ -103,7 +116,7 @@ html,body{
 #p3{
     position: absolute;
     left:350px;
-    top: 620px;
+    top: 560px;
     position: absolute;
     width: 242px;
     height: 66px;
@@ -127,7 +140,7 @@ html,body{
 #p4{
     position: absolute;
     left:650px;
-    top: 380px;
+    top: 280px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);
@@ -139,9 +152,12 @@ html,body{
     align-items: center;
     text-align: center;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 20px;
     display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    overflow: hidden;
 }
 #p4:hover{
     background-color: #FFE8D6;
@@ -149,7 +165,7 @@ html,body{
 #p5{
     position: absolute;
     left:650px;
-    top: 500px;
+    top: 420px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);
@@ -161,9 +177,12 @@ html,body{
     align-items: center;
     text-align: center;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 20px;
     display: flex;
+
+    overflow: auto;
+    
 }
 #p5:hover{
     background-color: #FFE8D6;
@@ -171,7 +190,7 @@ html,body{
 #p6{
     position: absolute;
     left:650px;
-    top: 620px;
+    top: 560px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);
@@ -194,7 +213,7 @@ html,body{
 #p7{
     position: absolute;
     left:950px;
-    top: 380px;
+    top: 280px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);
@@ -217,7 +236,7 @@ html,body{
 #p8{
     position: absolute;
     left:950px;
-    top: 500px;
+    top: 420px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);
@@ -239,7 +258,7 @@ html,body{
 }#p9{
     position: absolute;
     left:950px;
-    top: 620px;
+    top: 560px;
     width: 242px;
     height: 66px;
     background: rgba(201, 177, 93, 0.94);

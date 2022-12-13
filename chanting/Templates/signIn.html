@@ -13,6 +13,11 @@
 
 </head>
 <body>
+    {% if messages %}
+        {% for message in messages %}
+        {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+    {% endif %}
     <div class="quoteBG"></div>
 
     <div class="quote">" ความรู้  

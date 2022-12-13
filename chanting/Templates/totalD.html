@@ -13,6 +13,7 @@
 <body>
     {% if user.is_authenticated %}
     <img src='{% static "img/Rectangle 58 (2).png" %}' class="upr">
+    <h1 id="mon">บทสวดวันสำคัญทางศาสนา</h1>
     <img src='{% static "img/Group 6 (1).png" %}' class="pra">
     <a  href="/main"><h1 id="etan">EnlighTan</h1></a>
     
@@ -24,7 +25,8 @@
         <a  href="{% url 'set' title=visaka n=1 %}"><button  id="p4">{{visaka}}</a>
         <a  href="{% url 'set' title=asa n=1 %}"><button  id="p5">{{asa}}</a>
         <a  href="{% url 'set' title=atha n=1 %}"><button  id="p6">{{atha}}</a>
-    <h1 id="mon">บทสวดทั้งหมด</h1>
+    
+
     
     
     {% else %}

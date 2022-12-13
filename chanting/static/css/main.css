@@ -246,9 +246,10 @@ h1{
 
 .flex-option-container .daily .topic{
     position: absolute;
-    width: 220px;
+    width: 240px;
     height: 29px;
-    left: calc(50% - 201px/2 - 1.98px);
+    
+    left: calc(50% - 241px/2 - 1.98px);
     top: calc(50% - 29px/2 + 1.88px);
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
@@ -300,15 +301,15 @@ h1{
     position: absolute;
     width: 71.98px;
     height: 73px;
-    left: calc(50% - 164px/2 + 351.5px);
+    left: calc(50% - 164px/2 + 355.5px);
     top: calc(50% - 29px/2 - 50px);
 }
 
 .flex-option-container .others .topic{
     position: absolute;
-    width: 184px;
+    width: 190px;
     height: 29px;
-    left: calc(50% - 164px/2 + 301.5px);
+    left: calc(50% - 164px/2 + 297.5px);
     top: calc(50% - 29px/2 + 2px);
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';
@@ -322,9 +323,9 @@ h1{
 
 .flex-option-container .others .description{
     position: absolute;
-    width: 180px;
+    width: 190px;
     height: 83px;
-    left: calc(50% - 164px/2 + 293.5px);
+    left: calc(50% - 164px/2 + 297.5px);
     top: 150.88px;
 
     font-family: 'Noto Sans Thai','Kanit', 'sans-serif';

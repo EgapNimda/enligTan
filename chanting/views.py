@@ -91,8 +91,14 @@ def set(request,title,n):
         context.update( {"next" : str(n+1)} )
         n = n-1
         for i in range (n*9,len(prlist)):
+            if(i - (n*9) == 9):
+                break
             key = "p" + str( (i % 9) + 1)
             context.update( {key : prlist[i].title})
+            if(i+1 < len(prlist)):
+                context.update({"continue" : "continue"})
+        if(n > 0) :
+            context.update({"back" : str(n)})
 
     return render(request,"set.html",context)
 
